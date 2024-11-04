@@ -1,0 +1,205 @@
+@font-face {
+    font-family: HankenGrotesk ;
+    src: url(/assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+:root {
+
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    --gradaint : hsl(241, 81%, 54%) 0%, hsl(252, 100%, 67%) 100%
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'HankenGrotesk';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--Pale-blue);
+}
+
+.card {
+    width: 700px;
+    background-color: var(--White);
+    border-radius: 2rem;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.card-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+    color: white;
+    border-radius: 2rem;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    
+    h1 {
+        color: var(--Pale-blue);
+        margin: 2rem 0;
+        font-size: 25px;
+    }
+
+    .score {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        background: linear-gradient(hsla(256, 72%, 46%, 1) 0%,hsla(241, 72%, 46%, 0) 100% );
+
+        .Score {
+            font-size: 70px;
+            font-weight: 700;
+        }
+
+        
+    }
+
+    h2 {
+        margin: 1rem 0;
+        font-size: 35px;
+    }
+
+    p {
+        margin: 2rem ;
+    }
+}
+
+.card-right {
+    width: 50%;
+    background: var(--White);
+    border-radius: 2rem;
+    padding: 1.5rem 2rem;
+    
+    
+    
+}
+
+a {
+    padding: 20px 50px;
+    background: linear-gradient(hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+    width: 100%;
+    color: var(--Pale-blue);
+    display: inline-block;
+    text-align: center;
+    border-radius: 60px;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+
+.sum-score {
+    display: flex;
+    margin: 1.5rem 0;
+    padding: 15px 15px;
+    justify-content: space-between;
+    border-radius: 5px;
+
+    p {
+        font-size: 17px;
+        font-weight: 800;
+        color: var(--Dark-gray-blue);
+    }
+
+    span {
+        margin-left: 5px;
+        opacity: 50%;
+
+    }
+}
+
+
+.sum-score:nth-of-type(1) {
+    background: hsl(0, 100%, 67% , 0.1);;
+
+    .sum-icon p {
+        color: var(--Light-red);
+    }
+}
+.sum-score:nth-of-type(2) {
+    background: hsl(39, 100%, 56%, 0.1);
+    
+    .sum-icon p {
+        color: var(--Orangey-yellow);
+    }
+}
+.sum-score:nth-of-type(3) {
+    background: hsl(166, 100%, 37%, 0.1);
+
+    .sum-icon p {
+        color: --;
+    }
+}
+.sum-score:nth-of-type(4) {
+    background: hsl(234, 85%, 45%, 0.1);
+
+    .sum-icon p {
+        color: var(--Cobalt-blue);
+    }
+}
+
+.sum-icon {
+    display: flex;
+}
+
+.sum-icon img {
+    margin-right: 15px;
+}
+
+@media (max-width: 375px) {
+
+
+    
+    .card-flex {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .card-left {
+        width: 100%;
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    .card-right {
+        width: 100%;
+    }
+
+    .card-right a {
+        background: var(--Dark-gray-blue);
+    }
+}
+
+
+
+
+
+
